@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup</title>
+</head>
+<body>
+
+  <h1>Login and Signup</h1>
+
+  <!-- SignIn Form -->
+  <form id="signInForm">
+    <h2>SignIn</h2>
+    <label for="signInUsername">Username:</label>
+    <input type="text" id="signInUsername" name="signInUsername" required>
+    <br>
+    <label for="signInPassword">Password:</label>
+    <input type="password" id="signInPassword" name="signInPassword" required>
+    <br>
+    <button type="button" onclick="signIn()">Sign In</button>
+  </form>
+
+  <!-- SignUp Form -->
+  <form id="signUpForm">
+    <h2>SignUp</h2>
+    <label for="signUpUsername">Username:</label>
+    <input type="text" id="signUpUsername" name="signUpUsername" required>
+    <br>
+    <label for="signUpPassword">Password:</label>
+    <input type="password" id="signUpPassword" name="signUpPassword" required>
+    <br>
+    <button type="button" onclick="signUp()">Sign Up</button>
+  </form>
+
+  <!-- Display area for Welcome page or error messages -->
+  <div id="result"></div>
+
+  <script>
+    // Function to handle SignIn
+    function signIn() {
+      const username = document.getElementById('signInUsername').value;
+      const password = document.getElementById('signInPassword').value;
+
+      // Make an AJAX request to your server to validate credentials
+      // Example using Fetch API
+      fetch('http://127.0.0.1:5500//signInEndpoint', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Display result
+        document.getElementById('result').innerHTML = data.message;
+      })
+      .catch(error => console.error('Error:', error));
+    }
+
+    // Function to handle SignUp
+    function signUp() {
+      const username = document.getElementById('signUpUsername').value;
+      const password = document.getElementById('signUpPassword').value;
+
+      // Make an AJAX request to your server to insert new user
+      // Example using Fetch API
+      fetch('http://127.0.0.1:5500//signUpEndpoint', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Display result
+        document.getElementById('result').innerHTML = data.message;
+      })
+      .catch(error => console.error('Error:', error));
+    }
+  </script>
+
+</body>
+</html>

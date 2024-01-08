@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Reki",
+        "age": 2,
+        "weight": 7,
+        "type": "Rottweiler",
+        "likes": "Running in the park"
+    },
+    {
+      "name": "Fluffy",
+      "age": 3,
+      "weight": 10.5,
+      "type": "Cat",
+      "likes": "Playing with yarn"
+    },
+    {
+      "name": "Buddy",
+      "age": 2,
+      "weight": 15.8,
+      "type": "Dog",
+      "likes": "Fetching the ball"
+    },
+    {
+      "name": "Tweety",
+      "age": 1,
+      "weight": 0.5,
+      "type": "Bird",
+      "likes": "Singing melodies"
+    }
+  ]
+  

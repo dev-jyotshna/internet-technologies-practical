@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+  }
+  
+  .info div {
+    width: 45%;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 0.5em;
+  }
+  
+  h2, p {
+    margin-bottom: 1em;
+  }
+  
+  .hobbies, .plans {
+    background-color: #fff;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
